@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A036A58820BE446A00508F2B"
-               BuildableName = "SnatchBase_macOS.framework"
+               BuildableName = "SnatchBase.framework"
                BlueprintName = "SnatchBase macOS"
                ReferencedContainer = "container:SnatchBase.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A036A58820BE446A00508F2B"
-            BuildableName = "SnatchBase_macOS.framework"
+            BuildableName = "SnatchBase.framework"
             BlueprintName = "SnatchBase macOS"
             ReferencedContainer = "container:SnatchBase.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A036A58820BE446A00508F2B"
-            BuildableName = "SnatchBase_macOS.framework"
+            BuildableName = "SnatchBase.framework"
             BlueprintName = "SnatchBase macOS"
             ReferencedContainer = "container:SnatchBase.xcodeproj">
          </BuildableReference>

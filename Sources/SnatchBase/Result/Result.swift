@@ -5,7 +5,9 @@ import Foundation
 */
 final public class Result {
     public class NoBodyError: Error {
-        var localizedDescription: String = "The response body is empty."
+        public static var new: NoBodyError {
+            return NoBodyError()
+        }
     }
     
     /**
@@ -18,7 +20,7 @@ final public class Result {
     */
     public let response: HTTPURLResponse
 
-    init(from response: HTTPURLResponse, _ data: Data? = nil) {
+    public init(from response: HTTPURLResponse, _ data: Data? = nil) {
         self.response = response
         self.data = data
     }

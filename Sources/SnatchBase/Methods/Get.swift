@@ -6,5 +6,7 @@ import Foundation
 public extension Snatch {
     public class Get {
         public weak var father: Snatch?
+        
+        let encoder = URLQueryEncoding()
     }
 }

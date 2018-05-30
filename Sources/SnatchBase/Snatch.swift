@@ -36,7 +36,7 @@ public class Snatch {
 
         - returns: URLSessionDataTask, the data task that needs to be resumed in order to be started.
     */
-    internal func task(with request: URLRequest, _ handler: @escaping DataTaskCallback) -> URLSessionDataTask {
+    public func task(with request: URLRequest, _ handler: @escaping DataTaskCallback) -> URLSessionDataTask {
         return session.dataTask(with: request, completionHandler: handler)
     }
 }
