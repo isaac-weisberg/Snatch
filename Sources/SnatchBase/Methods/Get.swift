@@ -7,6 +7,6 @@ public extension Snatch {
     public class Get {
         public weak var father: Snatch?
         
-        let encoder = URLQueryEncoding()
+        public let encoder = URLQueryEncoding()
     }
 }
