@@ -1,7 +1,8 @@
 import Foundation
 
 public class URLQueryEncoding {
-
+    public typealias Parameters = [AnyHashable: Any]
+    
     /**
         Encodes a dictionary of parameters into a URLEncoded query. Expects all members to be escaped.
 
@@ -9,7 +10,7 @@ public class URLQueryEncoding {
 
         - returns: string, a URLEncoded query.
     */
-    public func encode(_ dict: [AnyHashable: Any]) -> String {
+    public func encode(_ dict: Parameters) -> String {
         return dict.map { "\($0)=\($1)" }.joined(separator: "&")
     }
 
@@ -21,15 +22,15 @@ public class URLQueryEncoding {
 
         - returns: a new url with a new query.
     */
-    public func swapQuery(of url: URL, with query: String) -> URL? {
+    public func swapQuery(of url: URL, with query: String) throws -> URL {
         guard let components = url.components else {
-            return nil
+            throw SnatchError.spooks
         }
 
         components.query = query
 
         guard let newURL = components.url else {
-            return nil
+            throw SnatchError.spooks
         }
 
         return newURL
@@ -43,8 +44,8 @@ public class URLQueryEncoding {
 
         - returns: a new url with a new query.
     */
-    public func swapQuery(of url: URL, with parameters: [AnyHashable: Any]) -> URL? {
+    public func swapQuery(of url: URL, with parameters: Parameters) throws -> URL {
         let query = encode(parameters)
-        return swapQuery(of: url, with: query)
+        return try swapQuery(of: url, with: query)
     }
 }

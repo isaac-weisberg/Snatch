@@ -5,13 +5,17 @@ import Foundation
 */
 public extension Snatch {
     public class Post {
-        public weak var father: Snatch?
+        public weak var father: Snatch!
+        
+        internal let encoder = JSONBodyEncoding()
 
-        public func generateRequest(outOf url: URL, _ headers: [String: String]? = nil) -> URLRequest {
+        public func generate<Parameters: Encodable>(_ url: URL, _ parameters: Parameters? = nil, _ headers: [String: String]? = nil) throws -> URLRequest {
             var request = URLRequest(url: url)
 
             request.httpMethod = "POST"
 
+            try apply(parameters: parameters, to: &request)
+            
             if let headers = headers {
                 request.allHTTPHeaderFields = headers
             }
@@ -19,10 +23,8 @@ public extension Snatch {
             return request
         }
 
-        public func apply<Parameters: Encodable>(parameters: Parameters?, to request: inout URLRequest) throws {
+        internal func apply<Parameters: Encodable>(parameters: Parameters?, to request: inout URLRequest) throws {
             if let parameters = parameters {
-                let encoder = JSONBodyEncoding()
-
                 try encoder.apply(parameters, to: &request)
             }
         }
