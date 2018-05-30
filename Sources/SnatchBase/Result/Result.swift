@@ -5,9 +5,7 @@ import Foundation
 */
 final public class Result {
     public class NoBodyError: Error {
-        public static var new: NoBodyError {
-            return NoBodyError()
-        }
+        
     }
     
     /**
@@ -23,5 +21,16 @@ final public class Result {
     public init(from response: HTTPURLResponse, _ data: Data? = nil) {
         self.response = response
         self.data = data
+    }
+    
+    public func json<Target: Decodable>(_ type: Target.Type) throws -> Target {
+        guard let data = data else {
+            throw NoBodyError()
+        }
+        let decoder = JSONDecoder()
+        
+        let result = try decoder.decode(type, from: data)
+        
+        return result
     }
 }
