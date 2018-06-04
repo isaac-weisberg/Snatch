@@ -20,7 +20,7 @@ public class Snatch {
         A handler type used for dataTask completion on URLSession.
     */
     public typealias DataTaskCallback = (Data?, URLResponse?, Error?) -> Void
-    public typealias SnatchTaskCallback = (Result?, Error?) -> Void
+    public typealias SnatchTaskCallback = (Result?, SnatchError?) -> Void
 
     public init(with sessionConfig: URLSessionConfiguration = URLSessionConfiguration.default) {
         session = URLSession(configuration: sessionConfig)
@@ -44,10 +44,14 @@ public class Snatch {
     internal func adaptedHandler(_ callback: @escaping SnatchTaskCallback) -> DataTaskCallback {
         return { data, response, error in
             guard let response = response as? HTTPURLResponse else {
-                callback(nil, SnatchError.spooks)
+                callback(nil, .spooks)
                 return
             }
-            callback(Result(from: response, data), error)
+            var snatchError: SnatchError?
+            if let error = error {
+                snatchError = .connection(error)
+            }
+            callback(Result(from: response, data), snatchError)
         }
     }
 }

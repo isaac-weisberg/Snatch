@@ -6,4 +6,5 @@
 public enum SnatchError: Error {
     case spooks
     case encoding(Error)
+    case connection(Error)
 }
