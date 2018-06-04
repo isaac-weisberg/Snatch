@@ -1,6 +1,11 @@
 import Foundation
 
 public class Snatch {
+    public enum SnatchTaskResult {
+        case success(Result)
+        case failure(SnatchError)
+    }
+    
     /**
         The underlying URLSession object.
     */
@@ -20,7 +25,7 @@ public class Snatch {
         A handler type used for dataTask completion on URLSession.
     */
     public typealias DataTaskCallback = (Data?, URLResponse?, Error?) -> Void
-    public typealias SnatchTaskCallback = (Result?, SnatchError?) -> Void
+    public typealias SnatchTaskCallback = (SnatchTaskResult) -> Void
 
     public init(with sessionConfig: URLSessionConfiguration = URLSessionConfiguration.default) {
         session = URLSession(configuration: sessionConfig)
@@ -43,15 +48,14 @@ public class Snatch {
     
     internal func adaptedHandler(_ callback: @escaping SnatchTaskCallback) -> DataTaskCallback {
         return { data, response, error in
+            if let error = error {
+                callback(.failure(.connection(error)))
+            }
             guard let response = response as? HTTPURLResponse else {
-                callback(nil, .spooks)
+                callback(.failure(.spooks))
                 return
             }
-            var snatchError: SnatchError?
-            if let error = error {
-                snatchError = .connection(error)
-            }
-            callback(Result(from: response, data), snatchError)
+            callback(.success(Result(from: response, data)))
         }
     }
 }
