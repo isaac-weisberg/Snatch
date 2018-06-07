@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:SnatchBase.xcodeproj">
+      location = "self:/Users/isaac_weisberg/Projects/Snatch/Snatch.xcodeproj">
    </FileRef>
 </Workspace>

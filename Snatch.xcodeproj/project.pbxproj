@@ -34,9 +34,9 @@
 		A036A56A20BE41E700508F2B /* Snatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snatch.swift; sourceTree = "<group>"; };
 		A036A56C20BE423200508F2B /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		A036A56D20BE423200508F2B /* Get.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Get.swift; sourceTree = "<group>"; };
-		A036A57320BE431700508F2B /* SnatchBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnatchBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A036A57320BE431700508F2B /* Snatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Snatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A036A57720BE431700508F2B /* iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = iOS.plist; sourceTree = "<group>"; };
-		A036A58920BE446A00508F2B /* SnatchBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnatchBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A036A58920BE446A00508F2B /* Snatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Snatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A036A58C20BE446A00508F2B /* macOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = macOS.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,12 +71,12 @@
 			children = (
 				A036A58C20BE446A00508F2B /* macOS.plist */,
 				A036A57720BE431700508F2B /* iOS.plist */,
-				A036A56120BE402A00508F2B /* SnatchBase */,
+				A036A56120BE402A00508F2B /* Snatch */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		A036A56120BE402A00508F2B /* SnatchBase */ = {
+		A036A56120BE402A00508F2B /* Snatch */ = {
 			isa = PBXGroup;
 			children = (
 				A036A56A20BE41E700508F2B /* Snatch.swift */,
@@ -86,7 +86,7 @@
 				A036A56920BE41BB00508F2B /* Extenstions */,
 				A036A56720BE40E700508F2B /* SnatchError.swift */,
 			);
-			path = SnatchBase;
+			path = Snatch;
 			sourceTree = "<group>";
 		};
 		A036A56620BE407600508F2B /* Encoding */ = {
@@ -126,8 +126,8 @@
 		A036A57420BE431700508F2B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A036A57320BE431700508F2B /* SnatchBase.framework */,
-				A036A58920BE446A00508F2B /* SnatchBase.framework */,
+				A036A57320BE431700508F2B /* Snatch.framework */,
+				A036A58920BE446A00508F2B /* Snatch.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -152,9 +152,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		A036A57220BE431700508F2B /* SnatchBase */ = {
+		A036A57220BE431700508F2B /* Snatch */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A036A57920BE431700508F2B /* Build configuration list for PBXNativeTarget "SnatchBase" */;
+			buildConfigurationList = A036A57920BE431700508F2B /* Build configuration list for PBXNativeTarget "Snatch" */;
 			buildPhases = (
 				A036A56E20BE431700508F2B /* Sources */,
 				A036A56F20BE431700508F2B /* Frameworks */,
@@ -165,14 +165,14 @@
 			);
 			dependencies = (
 			);
-			name = SnatchBase;
+			name = Snatch;
 			productName = SnatchBase;
-			productReference = A036A57320BE431700508F2B /* SnatchBase.framework */;
+			productReference = A036A57320BE431700508F2B /* Snatch.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		A036A58820BE446A00508F2B /* SnatchBase macOS */ = {
+		A036A58820BE446A00508F2B /* Snatch macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A036A58E20BE446A00508F2B /* Build configuration list for PBXNativeTarget "SnatchBase macOS" */;
+			buildConfigurationList = A036A58E20BE446A00508F2B /* Build configuration list for PBXNativeTarget "Snatch macOS" */;
 			buildPhases = (
 				A036A58420BE446A00508F2B /* Sources */,
 				A036A58520BE446A00508F2B /* Frameworks */,
@@ -183,9 +183,9 @@
 			);
 			dependencies = (
 			);
-			name = "SnatchBase macOS";
+			name = "Snatch macOS";
 			productName = "SnatchBase macOS";
-			productReference = A036A58920BE446A00508F2B /* SnatchBase.framework */;
+			productReference = A036A58920BE446A00508F2B /* Snatch.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -204,7 +204,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A036A55D20BE3FF700508F2B /* Build configuration list for PBXProject "SnatchBase" */;
+			buildConfigurationList = A036A55D20BE3FF700508F2B /* Build configuration list for PBXProject "Snatch" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -216,8 +216,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A036A57220BE431700508F2B /* SnatchBase */,
-				A036A58820BE446A00508F2B /* SnatchBase macOS */,
+				A036A57220BE431700508F2B /* Snatch */,
+				A036A58820BE446A00508F2B /* Snatch macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -509,7 +509,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.isaac-weisberg.SnatchBase";
-				PRODUCT_NAME = SnatchBase;
+				PRODUCT_NAME = Snatch;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -583,7 +583,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.isaac-weisberg.SnatchBase";
-				PRODUCT_NAME = SnatchBase;
+				PRODUCT_NAME = Snatch;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -597,7 +597,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A036A55D20BE3FF700508F2B /* Build configuration list for PBXProject "SnatchBase" */ = {
+		A036A55D20BE3FF700508F2B /* Build configuration list for PBXProject "Snatch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A036A55E20BE3FF700508F2B /* Debug */,
@@ -606,7 +606,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A036A57920BE431700508F2B /* Build configuration list for PBXNativeTarget "SnatchBase" */ = {
+		A036A57920BE431700508F2B /* Build configuration list for PBXNativeTarget "Snatch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A036A57A20BE431700508F2B /* Debug */,
@@ -615,7 +615,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A036A58E20BE446A00508F2B /* Build configuration list for PBXNativeTarget "SnatchBase macOS" */ = {
+		A036A58E20BE446A00508F2B /* Build configuration list for PBXNativeTarget "Snatch macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A036A58F20BE446A00508F2B /* Debug */,

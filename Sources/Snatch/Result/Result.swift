@@ -29,7 +29,12 @@ final public class Result {
         }
         let decoder = JSONDecoder()
         
-        let result = try decoder.decode(type, from: data)
+        let result: Target
+        do {
+            result = try decoder.decode(type, from: data)
+        } catch {
+            throw SnatchError.encoding(error)
+        }
         
         return result
     }
