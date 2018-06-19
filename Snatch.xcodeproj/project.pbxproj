@@ -23,7 +23,20 @@
 		A036A59620BE449100508F2B /* URLQueryEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A036A56420BE407400508F2B /* URLQueryEncoding.swift */; };
 		A036A59720BE449100508F2B /* URL+components.swift in Sources */ = {isa = PBXBuildFile; fileRef = A036A56320BE406A00508F2B /* URL+components.swift */; };
 		A036A59820BE449100508F2B /* SnatchError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A036A56720BE40E700508F2B /* SnatchError.swift */; };
+		A06ADB3420D90AAE007E317E /* Snatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A036A58920BE446A00508F2B /* Snatch.framework */; };
+		A06ADB3D20D90B62007E317E /* URLQueryEncodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06ADB3B20D90B62007E317E /* URLQueryEncodingTests.swift */; };
+		A06ADB3E20D90B62007E317E /* JSONBodyEncodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06ADB3C20D90B62007E317E /* JSONBodyEncodingTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A06ADB3520D90AAE007E317E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A036A55A20BE3FF700508F2B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A036A58820BE446A00508F2B;
+			remoteInfo = "Snatch macOS";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		A036A56220BE403800508F2B /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
@@ -38,6 +51,10 @@
 		A036A57720BE431700508F2B /* iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = iOS.plist; sourceTree = "<group>"; };
 		A036A58920BE446A00508F2B /* Snatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Snatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A036A58C20BE446A00508F2B /* macOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = macOS.plist; sourceTree = "<group>"; };
+		A06ADB2F20D90AAE007E317E /* SnatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A06ADB3320D90AAE007E317E /* SnatchTests.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SnatchTests.plist; sourceTree = "<group>"; };
+		A06ADB3B20D90B62007E317E /* URLQueryEncodingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLQueryEncodingTests.swift; sourceTree = "<group>"; };
+		A06ADB3C20D90B62007E317E /* JSONBodyEncodingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONBodyEncodingTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +72,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A06ADB2C20D90AAE007E317E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A06ADB3420D90AAE007E317E /* Snatch.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -62,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				A036A56020BE400000508F2B /* Sources */,
+				A06ADB2920D90A76007E317E /* Tests */,
 				A036A57420BE431700508F2B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -128,8 +154,35 @@
 			children = (
 				A036A57320BE431700508F2B /* Snatch.framework */,
 				A036A58920BE446A00508F2B /* Snatch.framework */,
+				A06ADB2F20D90AAE007E317E /* SnatchTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		A06ADB2920D90A76007E317E /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A06ADB3320D90AAE007E317E /* SnatchTests.plist */,
+				A06ADB2A20D90A7D007E317E /* SnatchTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		A06ADB2A20D90A7D007E317E /* SnatchTests */ = {
+			isa = PBXGroup;
+			children = (
+				A06ADB3A20D90B62007E317E /* EncodingTests */,
+			);
+			path = SnatchTests;
+			sourceTree = "<group>";
+		};
+		A06ADB3A20D90B62007E317E /* EncodingTests */ = {
+			isa = PBXGroup;
+			children = (
+				A06ADB3B20D90B62007E317E /* URLQueryEncodingTests.swift */,
+				A06ADB3C20D90B62007E317E /* JSONBodyEncodingTests.swift */,
+			);
+			path = EncodingTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,19 +241,41 @@
 			productReference = A036A58920BE446A00508F2B /* Snatch.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		A06ADB2E20D90AAE007E317E /* SnatchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A06ADB3720D90AAE007E317E /* Build configuration list for PBXNativeTarget "SnatchTests" */;
+			buildPhases = (
+				A06ADB2B20D90AAE007E317E /* Sources */,
+				A06ADB2C20D90AAE007E317E /* Frameworks */,
+				A06ADB2D20D90AAE007E317E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A06ADB3620D90AAE007E317E /* PBXTargetDependency */,
+			);
+			name = SnatchTests;
+			productName = SnatchTests;
+			productReference = A06ADB2F20D90AAE007E317E /* SnatchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		A036A55A20BE3FF700508F2B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0930;
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
 				TargetAttributes = {
 					A036A57220BE431700508F2B = {
 						CreatedOnToolsVersion = 9.3;
 					};
 					A036A58820BE446A00508F2B = {
 						CreatedOnToolsVersion = 9.3;
+					};
+					A06ADB2E20D90AAE007E317E = {
+						CreatedOnToolsVersion = 10.0;
 					};
 				};
 			};
@@ -218,6 +293,7 @@
 			targets = (
 				A036A57220BE431700508F2B /* Snatch */,
 				A036A58820BE446A00508F2B /* Snatch macOS */,
+				A06ADB2E20D90AAE007E317E /* SnatchTests */,
 			);
 		};
 /* End PBXProject section */
@@ -231,6 +307,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A036A58720BE446A00508F2B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A06ADB2D20D90AAE007E317E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -270,12 +353,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A06ADB2B20D90AAE007E317E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A06ADB3E20D90B62007E317E /* JSONBodyEncodingTests.swift in Sources */,
+				A06ADB3D20D90B62007E317E /* URLQueryEncodingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A06ADB3620D90AAE007E317E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A036A58820BE446A00508F2B /* Snatch macOS */;
+			targetProxy = A06ADB3520D90AAE007E317E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		A036A55E20BE3FF700508F2B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				ONLY_ACTIVE_ARCH = YES;
 			};
 			name = Debug;
 		};
@@ -317,7 +419,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
@@ -397,7 +499,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
@@ -594,6 +696,143 @@
 			};
 			name = Release;
 		};
+		A06ADB3820D90AAE007E317E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = QZRPL4EC5L;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Tests/SnatchTests.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.isaac-weisberg.SnatchTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		A06ADB3920D90AAE007E317E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = QZRPL4EC5L;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Tests/SnatchTests.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.isaac-weisberg.SnatchTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -620,6 +859,15 @@
 			buildConfigurations = (
 				A036A58F20BE446A00508F2B /* Debug */,
 				A036A59020BE446A00508F2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A06ADB3720D90AAE007E317E /* Build configuration list for PBXNativeTarget "SnatchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A06ADB3820D90AAE007E317E /* Debug */,
+				A06ADB3920D90AAE007E317E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
