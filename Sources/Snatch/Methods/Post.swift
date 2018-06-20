@@ -5,8 +5,6 @@ import Foundation
 */
 public extension Snatch {
     public class Post {
-        public weak var father: Snatch!
-        
         internal let encoder = JSONBodyEncoding()
 
         public func generate<Parameters: Encodable>(_ url: URL, _ parameters: Parameters? = nil, _ headers: [String: String]? = nil) throws -> URLRequest {

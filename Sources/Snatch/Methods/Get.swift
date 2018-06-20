@@ -5,8 +5,6 @@ import Foundation
 */
 public extension Snatch {
     public class Get {
-        public weak var father: Snatch!
-        
         internal let encoder = URLQueryEncoding()
         
         public func generate(_ url: URL, _ parameters: URLQueryEncoding.Parameters? = nil, _ headers: [String: String]? = nil) throws -> URLRequest {

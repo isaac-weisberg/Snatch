@@ -29,9 +29,6 @@ public class Snatch {
 
     public init(with sessionConfig: URLSessionConfiguration = URLSessionConfiguration.default) {
         session = URLSession(configuration: sessionConfig)
-        // Give a reference to a Snatch instance to all the extensions.
-        get.father = self
-        post.father = self
     }
     
     /**
