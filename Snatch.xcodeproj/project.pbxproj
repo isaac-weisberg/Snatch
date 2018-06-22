@@ -51,6 +51,7 @@
 		A036A57720BE431700508F2B /* iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = iOS.plist; sourceTree = "<group>"; };
 		A036A58920BE446A00508F2B /* Snatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Snatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A036A58C20BE446A00508F2B /* macOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = macOS.plist; sourceTree = "<group>"; };
+		A047A49E20DCCBB400D4E4A8 /* Snatch.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Snatch.podspec; sourceTree = "<group>"; };
 		A06ADB2F20D90AAE007E317E /* SnatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A06ADB3320D90AAE007E317E /* SnatchTests.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SnatchTests.plist; sourceTree = "<group>"; };
 		A06ADB3B20D90B62007E317E /* URLQueryEncodingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLQueryEncodingTests.swift; sourceTree = "<group>"; };
@@ -86,6 +87,7 @@
 		A036A55920BE3FF700508F2B = {
 			isa = PBXGroup;
 			children = (
+				A047A49E20DCCBB400D4E4A8 /* Snatch.podspec */,
 				A036A56020BE400000508F2B /* Sources */,
 				A06ADB2920D90A76007E317E /* Tests */,
 				A036A57420BE431700508F2B /* Products */,
@@ -105,12 +107,7 @@
 		A036A56120BE402A00508F2B /* Snatch */ = {
 			isa = PBXGroup;
 			children = (
-				A036A56A20BE41E700508F2B /* Snatch.swift */,
-				A036A56B20BE423200508F2B /* Methods */,
-				A036A56820BE41AB00508F2B /* Result */,
-				A036A56620BE407600508F2B /* Encoding */,
-				A036A56920BE41BB00508F2B /* Extenstions */,
-				A036A56720BE40E700508F2B /* SnatchError.swift */,
+				A047A49F20DCCC6900D4E4A8 /* Classes */,
 			);
 			path = Snatch;
 			sourceTree = "<group>";
@@ -157,6 +154,19 @@
 				A06ADB2F20D90AAE007E317E /* SnatchTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		A047A49F20DCCC6900D4E4A8 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A036A56A20BE41E700508F2B /* Snatch.swift */,
+				A036A56B20BE423200508F2B /* Methods */,
+				A036A56820BE41AB00508F2B /* Result */,
+				A036A56620BE407600508F2B /* Encoding */,
+				A036A56920BE41BB00508F2B /* Extenstions */,
+				A036A56720BE40E700508F2B /* SnatchError.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		A06ADB2920D90A76007E317E /* Tests */ = {
