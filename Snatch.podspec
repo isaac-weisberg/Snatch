@@ -73,6 +73,7 @@ Pod::Spec.new do |s|
   # s.watchos.deployment_target = "2.0"
   # s.tvos.deployment_target = "9.0"
 
+  s.swift_version = "4.0"
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -91,7 +92,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Sources/Snatch/Classes", "Sources/Snatch/ClassesClasses/**/*.{h,m}"
+  s.source_files  = "Sources/Snatch/Classes/**/*"
   s.exclude_files = "Sources/Snatch/Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
