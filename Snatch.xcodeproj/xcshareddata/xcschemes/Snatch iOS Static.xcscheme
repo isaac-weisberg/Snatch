@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1000"
+   LastUpgradeVersion = "0940"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A036A57220BE431700508F2B"
+               BlueprintIdentifier = "A007DCA720DDF6E5001ED01B"
                BuildableName = "Snatch.framework"
-               BlueprintName = "Snatch"
+               BlueprintName = "Snatch iOS Static"
                ReferencedContainer = "container:Snatch.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A036A57220BE431700508F2B"
+            BlueprintIdentifier = "A007DCA720DDF6E5001ED01B"
             BuildableName = "Snatch.framework"
-            BlueprintName = "Snatch"
+            BlueprintName = "Snatch iOS Static"
             ReferencedContainer = "container:Snatch.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A036A57220BE431700508F2B"
+            BlueprintIdentifier = "A007DCA720DDF6E5001ED01B"
             BuildableName = "Snatch.framework"
-            BlueprintName = "Snatch"
+            BlueprintName = "Snatch iOS Static"
             ReferencedContainer = "container:Snatch.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
