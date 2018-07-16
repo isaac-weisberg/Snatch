@@ -7,10 +7,16 @@ public extension Snatch {
     public class Get {
         internal let encoder = URLQueryEncoding()
         
-        public func generate(_ url: URL, _ parameters: URLQueryEncoding.Parameters? = nil, _ headers: [String: String]? = nil) throws -> URLRequest {
+        public func generate(_ url: URL, _ parameters: URLQueryEncoding.Parameters? = nil, _ headers: [String: String]? = nil) -> SnatchResult<URLRequest> {
             let newUrl: URL
             if let parameters = parameters {
-                newUrl = try encoder.swapQuery(of: url, with: parameters)
+                let res = encoder.swapQuery(of: url, with: parameters)
+                switch res {
+                case .success(let url):
+                    newUrl = url
+                case .failure(let error):
+                    return .failure(error)
+                }
             } else {
                 newUrl = url
             }
@@ -19,7 +25,7 @@ public extension Snatch {
             
             request.allHTTPHeaderFields = headers
             
-            return request
+            return .success(request)
         }
     }
 }

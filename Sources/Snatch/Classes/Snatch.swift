@@ -1,11 +1,10 @@
 import Foundation
+import ResultKit
+
+public typealias SnatchResult<Value> = ResultKit.Result<Value, SnatchError>
 
 public class Snatch {
-    public enum SnatchTaskResult {
-        case success(Result)
-        case failure(SnatchError)
-    }
-    
+
     /**
         The underlying URLSession object.
     */
@@ -25,7 +24,7 @@ public class Snatch {
         A handler type used for dataTask completion on URLSession.
     */
     public typealias DataTaskCallback = (Data?, URLResponse?, Error?) -> Void
-    public typealias SnatchTaskCallback = (SnatchTaskResult) -> Void
+    public typealias SnatchTaskCallback = (ResultKit.Result<Result, SnatchError>) -> Void
 
     public init(with sessionConfig: URLSessionConfiguration = URLSessionConfiguration.default) {
         session = URLSession(configuration: sessionConfig)

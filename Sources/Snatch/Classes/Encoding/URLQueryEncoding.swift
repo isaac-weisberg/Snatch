@@ -1,4 +1,5 @@
 import Foundation
+import ResultKit
 
 public class URLQueryEncoding {
     public typealias Parameters = [AnyHashable: Any]
@@ -22,18 +23,18 @@ public class URLQueryEncoding {
 
         - returns: a new url with a new query.
     */
-    public func swapQuery(of url: URL, with query: String) throws -> URL {
+    public func swapQuery(of url: URL, with query: String) -> SnatchResult<URL> {
         guard let components = url.components else {
-            throw SnatchError.spooks
+            return .failure(SnatchError.spooks)
         }
 
         components.query = query
 
         guard let newURL = components.url else {
-            throw SnatchError.spooks
+            return .failure(SnatchError.spooks)
         }
 
-        return newURL
+        return .success(newURL)
     }
 
     /**
@@ -44,8 +45,8 @@ public class URLQueryEncoding {
 
         - returns: a new url with a new query.
     */
-    public func swapQuery(of url: URL, with parameters: Parameters) throws -> URL {
+    public func swapQuery(of url: URL, with parameters: Parameters) -> SnatchResult<URL> {
         let query = encode(parameters)
-        return try swapQuery(of: url, with: query)
+        return swapQuery(of: url, with: query)
     }
 }
